@@ -1,0 +1,3 @@
+rootProject.name = 'pexza'
+
+include ':app'
