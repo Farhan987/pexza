@@ -19,7 +19,7 @@ class CustomButton extends Component {
           alignSelf: "center",
           justifyContent: "center",
           height: 50,
-          borderWidth: this.props.borderWidth ? this.props.borderWidth : 0,
+          borderWidth: this.props.borderWidth ? this.props.borderWidth : 1,
           borderColor: this.props.borderColor ? this.props.borderColor : ""
         }}
       >

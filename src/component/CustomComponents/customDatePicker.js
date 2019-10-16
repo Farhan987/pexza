@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Text } from "react-native";
-import { Icon, DatePicker } from "native-base";
+import { Icon, DatePicker, Item } from "native-base";
 import { CUSTOM_FEILD_COLOR } from "../../theme/colors";
 import { LARGE } from "../../font/font";
 
@@ -13,46 +13,45 @@ export default class CustomDatePicker extends Component {
 
   render() {
     return (
-      <View
+      <Item
         style={{
-          height: 55,
+          height: 43,
           flexDirection: "row",
-          marginTop: 10,
           width: "97%",
           justifyContent: "center",
           alignSelf: "center",
-          borderRadius: 5,
-          borderWidth: 1,
           borderColor: CUSTOM_FEILD_COLOR
         }}
       >
         <View
           style={{
-            flex: 1,
+            flex: 0.55,
             justifyContent: "center",
-            alignItems: "center"
+            alignItems: "flex-start"
           }}
         >
           <Icon
             name={this.props.iconName ? this.props.iconName : "?"}
             type="FontAwesome"
-            style={{ fontSize: LARGE }}
+            style={{ fontSize: LARGE, color: "#979797" }}
           />
         </View>
         <View
           style={{
-            flex: 3,
+            flex: 4,
             justifyContent: "center",
             alignItems: "center"
           }}
         >
-          <Text style={{ alignSelf: "flex-start" }}>
+          <Text
+            style={{ alignSelf: "flex-start", fontSize: 19, color: "#979797" }}
+          >
             {this.props.title ? this.props.title : "Select Date"}
           </Text>
         </View>
 
         <View
-          style={{ flex: 3, justifyContent: "center", alignItems: "center" }}
+          style={{ flex: 2, justifyContent: "center", alignItems: "center" }}
         >
           <DatePicker
             androidMode={"spinner"}
@@ -72,7 +71,7 @@ export default class CustomDatePicker extends Component {
             style={{ alignSelf: "flex-start" }}
           />
         </View>
-      </View>
+      </Item>
     );
   }
 }

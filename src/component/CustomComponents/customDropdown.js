@@ -20,13 +20,11 @@ export default class CustomDropdown extends Component {
   render() {
     return (
       <Item
-        regular
         style={{
           alignSelf: "center",
           borderColor: CUSTOM_FEILD_COLOR,
           borderRadius: 8,
           height: this.props.Inputheight ? this.props.Inputheight : 50,
-
           flexDirection: "row",
           marginTop: 10,
           width: "97%",
@@ -59,7 +57,7 @@ export default class CustomDropdown extends Component {
           <Text
             style={{
               alignSelf: "flex-start",
-              fontSize: MEDIUM,
+              fontSize: LARGE,
               color: CUSTOM_FEILD_COLOR
             }}
           >

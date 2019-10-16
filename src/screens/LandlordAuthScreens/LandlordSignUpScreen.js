@@ -11,6 +11,7 @@ import { WHITE, GREY, BLACK, NAVY_BLUE } from "../../theme/colors";
 import CustomTextInput from "../../component/CustomComponents/TextInput/CuustomTextInput";
 import CustomButton from "../../component/CustomComponents/Button/CustomerButton";
 import CustomDropdown from "../../component/CustomComponents/customDropdown";
+import CustomDatePicker from "../../component/CustomComponents/customDatePicker";
 
 class LandlordSignUpScreen extends Component {
   state = {
@@ -98,7 +99,7 @@ class LandlordSignUpScreen extends Component {
             style={{
               alignItems: "center",
               justifyContent: "center",
-              height: 70,
+              height: 68,
               backgroundColor: "red"
             }}
           >
@@ -161,11 +162,10 @@ class LandlordSignUpScreen extends Component {
               </Text>
             )}
           </View>
-          <View style={{ height: 15 }}></View>
-          <View style={{ height: 40 }}>
-            <CustomDropdown iconName="calendar" title="DOB" />
+          <View>
+            <CustomDatePicker showIcon iconName="calendar" />
           </View>
-          <View style={{ height: 15 }}></View>
+          <View style={{ height: 30 }}></View>
           <View style={{ height: 40 }}>
             <CustomTextInput
               keyboardType="email-address"
